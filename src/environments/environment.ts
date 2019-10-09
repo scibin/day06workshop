@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  payment_url: 'http://192.168.1.2:7000',
+  api_url: 'http://api.openweathermap.org/data/2.5/weather'
 };
 
 /*

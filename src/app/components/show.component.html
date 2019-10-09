@@ -1,0 +1,24 @@
+
+<mat-card>
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+      <mat-card-header>
+          <mat-card-title>{{ cityWeatherData.cityName}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-actions>
+          <button type="button" mat-button mat-raised-button color="primary"
+              (click)="back()">
+            <mat-icon>arrow_back</mat-icon>
+            Back
+          </button>
+        </mat-card-actions>
+  </div>
+  <!-- <img mat-card-image [src]="character?.image"> -->
+  <mat-card-content>
+    <p>Temperature (&#8451;): {{ cityWeatherData.temp }}</p>
+    <p>Pressure (bar): {{ cityWeatherData.pressure }}</p>
+    <p>Humidity (%): {{ cityWeatherData.humidity }}</p>
+    <p>Wind Speed (m/s): {{ cityWeatherData.windSpeed }}</p>
+    <p>Wind Degree: {{ cityWeatherData.windDegree }}</p>
+  </mat-card-content>
+
+</mat-card>
