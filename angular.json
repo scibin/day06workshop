@@ -120,6 +120,10 @@
               "devServerTarget": "day06workshop:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }
