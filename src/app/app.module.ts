@@ -5,9 +5,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FormsModule } from '@angular/forms';
-import { SearchCompComponent } from './components/search-comp.component'
+import { SearchCompComponent } from './components/search-comp.component';
 
-import { WeatherServiceService } from './services/weather-service.service'
+import { WeatherServiceService } from './services/weather-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';

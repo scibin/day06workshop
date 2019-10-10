@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { WeatherServiceService } from '../services/weather-service.service'
+import { WeatherServiceService } from '../services/weather-service.service';
 
 // NOTE: This should actually be called addcity component
 // instead of search-comp
@@ -10,25 +10,22 @@ import { WeatherServiceService } from '../services/weather-service.service'
 })
 export class SearchCompComponent implements OnInit {
 
-  constructor(private weatherSvc: WeatherServiceService){}
-  
+  constructor(private weatherSvc: WeatherServiceService) {}
 
-  cityName: string
+  cityName: string;
 
   ngOnInit() {
   }
 
   addCity() {
-    if (!(this.cityName === "" || this.cityName === undefined)) {
+    if (!(this.cityName === '' || this.cityName === undefined)) {
       // Adds name of city input from user into the cityList array
       // if field is not blank
-      this.weatherSvc.setCity(this.cityName)
+      this.weatherSvc.setCity(this.cityName);
     }
-    this.cityName="";
+    this.cityName = '';
   }
-
-  checkCityList() {
-    console.info(this.weatherSvc.getCityList());
-  }
-
+  // checkCityList() {
+  //   console.info(this.weatherSvc.getCityList());
+  // }
 }

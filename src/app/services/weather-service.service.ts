@@ -12,28 +12,27 @@ export class WeatherServiceService {
   constructor(private httpClientSvc: HttpClient) { }
 
   // New code: Data array here
-  private cityList: string[] = ["Singapore", "Kuala Lumpur", "Tokyo", "Bangkok", "Hong Kong", "Beijing"];
+  private cityList: string[] = ['Singapore', 'Kuala Lumpur', 'Tokyo', 'Bangkok', 'Hong Kong', 'Beijing'];
+  // API key is directly substituted into the service
+  apiKey = '476e23fe1116f4e69d2a3e68672604e1';
 
   setCity(cityName: string) {
     this.cityList.push(cityName);
   }
-  
+
   getCityList() {
     return this.cityList;
   }
 
-  // API key is directly substituted into the service
-  api_key = "476e23fe1116f4e69d2a3e68672604e1";
-
   // Promise function that does a callback for the .get method
-  getWeather(cityName: string): Promise<any>{  
+  getWeather(cityName: string): Promise<any> {
     const queryParams = new HttpParams()
-      .set("q", cityName)
-      .set("appid", this.api_key);
+      .set('q', cityName)
+      .set('appid', this.apiKey);
 
     return this.httpClientSvc.get(environment.api_url, { params: queryParams })
-      .toPromise()
-  };
+      .toPromise();
+  }
 
 }
 

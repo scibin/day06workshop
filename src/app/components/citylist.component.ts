@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { WeatherServiceService } from '../services/weather-service.service'
+import { WeatherServiceService } from '../services/weather-service.service';
 
 @Component({
   selector: 'app-citylist',
@@ -8,16 +8,13 @@ import { WeatherServiceService } from '../services/weather-service.service'
 })
 export class CitylistComponent implements OnInit {
 
-  constructor(private weatherSvc: WeatherServiceService){
-    this.cityList=this.weatherSvc.getCityList();
+  constructor(private weatherSvc: WeatherServiceService) {
+    this.cityList = this.weatherSvc.getCityList();
   }
 
-  cityList: string[]
+  cityList: string[];
 
-  ngOnInit() {
-    
-  }
-
+  ngOnInit() {}
 }
 
 
