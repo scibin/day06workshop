@@ -23,4 +23,4 @@ deploy:
   github_token: $GITHUB_TOKEN
   local_dir: dist/day06workshop
   on:
-    branch: routing
+    branch: master
