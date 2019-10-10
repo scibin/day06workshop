@@ -8,7 +8,7 @@ sudo: required
 
 branches:
   only:
-  - routing
+  - master
 
 before_script:
   - npm install -g @angular/cli
